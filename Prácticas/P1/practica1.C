@@ -294,7 +294,7 @@ int main(){
   getvideomode();
   printf(" CGA");
 
-  // Cubo dibujado con píxeles llamando a la función modoGraficoCGA() /  0x02 = Rosa / 0x01 = Azul celeste
+  // Cubo dibujado con píxeles llamando a la función modoGraficoCGA()  /  0x02 = Rosa / 0x01 = Azul celeste
 
   // Cuadrado 1
   for(i=70; i<110; i++){
