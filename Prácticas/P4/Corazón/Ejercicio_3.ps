@@ -1,0 +1,73 @@
+% Práctica 4 - Postscript
+% Realizado por: Arturo Alonso Carbonero
+% Grupo: 4ºA
+% Curso: 21-22
+
+<< /PageSize [612 472] >> setpagedevice % Página horizontal
+
+% Rectángulo para colorear el fondo
+newpath
+1 0.8 1 setrgbcolor        % Establecer el color a un rosa claro
+
+0 0 moveto
+612 0 rlineto
+0 472 rlineto
+-612 0 rlineto
+closepath
+
+fill
+stroke
+
+% Corazón
+
+% Círculos
+newpath
+1 0.4 1 setrgbcolor        % Establecer el color a un tono de rosa
+% x   y   R   angI angF
+95  270 55  0    205   arc % Semicírculo corazón derecha
+
+% x   y   R   angI angF
+205 270 55  -25  180   arc % Semicírculo corazón derecha
+fill
+stroke
+
+% Triángulo
+newpath
+1 0.4 1 setrgbcolor        % Establecer el color al de los semicírculos
+
+258 251 moveto
+-109 -120 rlineto
+-107 120 rlineto
+closepath
+
+fill
+stroke
+
+% Textos
+/Times-Roman findfont      % Tipo de letra del texto
+16 scalefont               % Tamaño de letra del texto
+setfont                    % Deja la fuente disponible para el texto
+
+newpath                    % Iniciar el 'path' de la primera frase
+0.1 setgray                % Declarar 0.3 en la escala de gris
+290 400 moveto             % Mover al punto (x, y) = (370, 610)
+(En el jardin umbroso mi cuerpo fatigado) show    % Mostrar frase
+stroke                     % Finalizar el 'path' de la primera frase
+
+newpath
+0.3 setgray
+290 300 moveto
+(Las auras matinales cubrieron de rocio;) show
+stroke
+
+newpath
+0.5 setgray
+290 200 moveto
+(Como en la paz de un suenio se deslice a tu lado) show
+stroke
+newpath
+
+0.7 setgray
+290 100 moveto
+(El fugitivo instante que reposar ansio.) show
+stroke

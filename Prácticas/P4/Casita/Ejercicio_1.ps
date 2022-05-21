@@ -1,0 +1,143 @@
+% Práctica 4 - Postscript
+% Realizado por: Arturo Alonso Carbonero
+% Grupo: 4ºA
+% Curso: 21-22
+
+% Césped
+newpath                    % Iniciar el 'path' del Rectángulo
+0 0.5 0 setrgbcolor        % Establecer el color a verde
+
+0 0 moveto                 % Mover al punto (x, y) = (0, 0)
+612 0 rlineto              % Trazar línea al (612, 0)
+0 450 rlineto              % Trazar línea al (612, 450)
+-612 0 rlineto             % Trazar línea al (0, 450)
+closepath                  % Cerrar el Rectángulo
+
+fill
+stroke
+
+% Cielo
+newpath
+0 0 1 setrgbcolor          % Establecer el color a azul
+
+0 450 moveto
+612 0 rlineto
+0 400 rlineto
+-612 0 rlineto
+closepath
+
+fill
+stroke
+
+% Fachada
+newpath
+0.17 0.17 0.17 setrgbcolor % Establecer el color a gris oscuro
+
+150 300 moveto
+300 0 rlineto
+0 200 rlineto
+-300 0 rlineto
+closepath
+
+fill
+stroke
+
+% Fachada superior
+newpath
+0.17 0.17 0.17 setrgbcolor % Establecer el color a gris oscuro
+
+150 500 moveto
+300 0 rlineto
+-150 100 rlineto
+closepath
+
+fill
+stroke
+
+% Lateral derecho
+newpath
+0.17 0.17 0.17 setrgbcolor % Establecer el color a gris oscuro
+
+450 300 moveto
+50 100 rlineto
+0 200 rlineto
+-50 -100 rlineto
+closepath
+
+fill
+stroke
+
+% Tejado derecho
+newpath
+0.5 0 0 setrgbcolor        % Establecer el color a rojo
+
+450 500 moveto
+-150 100 rlineto
+50 100 rlineto
+150 -100 rlineto
+closepath
+
+fill
+stroke
+
+% Tejado izquierdo
+newpath
+0.5 0 0 setrgbcolor        % Establecer el color a rojo
+
+150 500 moveto
+50 100 rlineto
+150 100 rlineto
+-50 -100 rlineto
+closepath
+
+fill
+stroke
+
+% Puerta
+newpath
+0 0 0.7 setrgbcolor        % Establecer el color a azul
+
+250 300 moveto
+100 0 rlineto
+0 50 rlineto
+-50 50 rlineto
+-50 -50 rlineto
+closepath
+
+fill
+stroke
+
+
+% Ventana derecha
+newpath
+0 0 0.9 setrgbcolor        % Establecer el color a azul
+
+350 430 moveto
+50 0 rlineto
+0 30 rlineto
+-50 0 rlineto
+closepath
+
+fill
+stroke
+
+% Ventana izquierda
+newpath
+0 0 0.9 setrgbcolor        % Establecer el color a azul
+
+200 430 moveto
+50 0 rlineto
+0 30 rlineto
+-50 0 rlineto
+closepath
+
+fill
+stroke
+
+% Sol 
+newpath
+1 1 0 setrgbcolor          % Establecer el color a un tono de amarillo
+% x   y   R   angI angF
+  0  800 100  0   360  arc % Sección de círculo
+fill
+stroke

@@ -1,0 +1,86 @@
+% Práctica 4 - Postscript
+% Realizado por: Arturo Alonso Carbonero
+% Grupo: 4ºA
+% Curso: 21-22
+
+% Rectángulo para colorear el fondo
+newpath                    % Iniciar el 'path' del rectángulo para colorear
+                           % el fondo
+0.7 0.7 0.7 setrgbcolor    % Establecer el color a un gris claro
+
+0 0 moveto                 % Mover al punto (x, y) = (0, 0)
+612 0 rlineto              % Trazar línea al punto (612, 0)
+0 800 rlineto              % Trazar línea al punto (612, 800)
+-612 0 rlineto             % Trazar línea al punto (0, 800)
+closepath                  % Cerrar el rectángulo
+
+fill                       % Colorear el interior de la figura
+stroke                     % Finalizar el 'path' del rectángulo para colorear
+                           % el fondo
+
+% Mitad derecha
+newpath
+0.99 0.99 0.99 setrgbcolor % Establecer el color a gris claro
+
+150 450 moveto
+0 200 rlineto
+400 0 rlineto
+0 -200 rlineto
+closepath
+
+fill
+stroke
+
+% Mitad izquierda
+newpath
+0 0 0 setrgbcolor          % Establecer el color a negro
+
+150 450 moveto
+0 200 rlineto
+200 0 rlineto
+0 -200 rlineto
+
+closepath
+fill
+stroke
+
+% Imagen
+newpath                    % Iniciar el 'path' del círculo
+1 1 1 setrgbcolor          % Establecer el color a blanco
+% x   y   R   angI angF
+  250  550 62.5  0  360  arc % Sección de círculo
+fill                       % Colorear el interior de la figura
+stroke                     % Finalizar el 'path' del círculo
+
+% Textos
+/Times-Roman findfont      % Tipo de letra del texto
+16 scalefont               % Tamaño de letra del texto
+setfont                    % Deja la fuente disponible para el texto
+
+newpath                    % Iniciar el 'path' de la primera frase
+0.3 setgray                % Declarar 0.3 en la escala de gris
+370 610 moveto             % Mover al punto (x, y) = (370, 610)
+(Arturo Alonso Carbonero) show    % Mostrar frase
+stroke                     % Finalizar el 'path' de la primera frase
+
+/Times-Roman findfont
+14 scalefont
+setfont
+
+newpath
+0.3 setgray                
+385 570 moveto
+(Ingeniero Informatico) show
+stroke
+
+newpath
+0.3 setgray
+385 540 moveto
+(Astronomo y Astrofisico) show
+stroke
+newpath
+
+0.3 setgray
+385 510 moveto
+(LinkedIn: "enlace") show
+stroke
