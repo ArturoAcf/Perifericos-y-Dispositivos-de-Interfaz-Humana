@@ -302,7 +302,7 @@ void setup()
   delay(500);
   int i;
   for (i = 0; i < tam; i += 1){    // Recorrer la cadena letra por letra
-    MostrarLetra(cadena[i]);       // Llama a la función MostrarLetra(char letra) pasandole como parámetro
+    MostrarLetra(cadena[i]);       // Llama a la función MostrarLetra(char letra) pasándole como parámetro
                                    // cada letra de la cadena.
     delay(2000);                   // Se realiza una espera de 2 segundos para marcar el fin de cada letra
   }
